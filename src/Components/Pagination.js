@@ -3,11 +3,14 @@ import React,{useState, useEffect} from "react";
 const Pagination = () => {
 
     const [items, setItems] = useState([]);
+
     const [visibility, setVisibility] = useState(3);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
+
         .then(response => response.json())
+
         .then(data => setItems(data))
     });
 
@@ -27,4 +30,5 @@ const Pagination = () => {
         </div>
     );
 }
+
 export default Pagination;
